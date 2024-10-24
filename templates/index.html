@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome | SynthAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <nav>
+        <div class="logo">SynthAI.</div>
+        <ul class="desktop-menu">
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+
+          <li><a href="/work">Our Work</a></li>
+          <li><a href="/services" class="btn dark">Try Now</a></li>
+        </ul>
+        <div class="mobile-nav">
+          <div class="menu-icon" onclick="toggleMobileMenu()">
+            <img src="{{ url_for('static', filename='images/menu-icon.svg') }}" alt="Menu Icon" />
+          </div>
+        </div>
+        <div class="mobile-menu-container" id="mobileMenu">
+          <div class="close-icon" onclick="toggleMobileMenu()">
+            <img src="{{ url_for('static', filename='images/close-icon.svg') }}" alt="Close Icon" />
+          </div>
+          <ul class="mobile-menu">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/work.html">Our Work</a></li>
+            <li><a href="/services" class="btn dark">Try Now</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+
+      <div class="mobile-menu-container" id="mobileMenu">
+        <div class="close-icon" onclick="toggleMobileMenu()">
+            <img src="{{ url_for('static', filename='images/close-icon.svg') }}" alt="Close Icon" />
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/work.html">Our Work</a></li>
+            <li><a href="/services" class="btn dark">Try Now</a></li>
+        </ul>
+    </div>
+    
+
+      <div class="hero-section">
+        <div class="left">
+          <h1>Learn the art of <br />Generative AI</h1>
+          <p>Generative AI is a powerful tool for automating and enhancing content creation, playing a crucial role in driving innovation within our platform by generating new, data-driven content across various creative and functional domains.</p>
+          <a href="https://www.ibm.com/topics/generative-ai" class="btn light enrol-icon">Learn More!!</a>
+        </div>
+        <div class="right">
+          <img src="{{ url_for('static', filename='images/image.png') }}" alt="Generative AI" />
+        </div>
+        <div class="bg"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Testimonials Section -->
+  <div class="wrapper">
+    <section class="testimonials-section">
+      <div class="left">
+        <div class="testimonial-card">
+          <div class="content">"Transform your imagination into stunning visuals with just a few words!"</div>
+          <div class="info">
+            <h4>Text to Image generator</h4>
+            <a href="text_to_image.html" class="company">Try it</a>
+          </div>
+          <img src="{{ url_for('static', filename='images/text_to_image.png') }}" alt="Text to Image" />
+        </div>
+
+        <div class="testimonial-card">
+          <div class="content">"Turn your thoughts into melodies with the power of words!"</div>
+          <div class="info">
+            <h4>Text to Music generator</h4>
+            <a href="text_to_music.html" class="company">Try it</a>
+          </div>
+          <img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Text to Music" />
+        </div>
+      </div>
+
+      <div class="right">
+        <h2>Unlock the Power of Generative AI!</h2>
+        <div class="features">
+          <p>Revolutionize your industry with AI that creates, personalizes, and automates. From crafting stunning content and designs to predicting trends and enhancing customer experiences, generative AI transforms possibilities into realities.</p>
+          <p>Magic begins with powerful prompts—precise instructions that guide AI to deliver exactly what you need. Harness the potential of prompts and AI to drive creativity, efficiency, and smarter decision-making today!</p>
+        </div>
+        <a href="#" class="btn light desktop-btn">Learn More</a>
+      </div>
+      <a href="#" class="btn light mobile-btn">Learn More</a>
+    </section>
+  </div>
+
+  <!-- Courses Section -->
+  <section class="courses-section">
+    <div class="wrapper">
+      <h2 class="light">Our Suggestions</h2>
+      <div class="course-cards">
+        <div class="course-card">
+          <img src="{{ url_for('static', filename='images/ticard.png') }}" alt="AI Images" />
+          <div class="info">
+            <h3>Secrets to Creating Stunning AI Images</h3>
+            <a href="https://www.youtube.com/watch?v=Od3FRMLqwFk" class="duration">Check Out</a>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="{{ url_for('static', filename='images/tmcard.png') }}" alt="AI Music" />
+          <div class="info">
+            <h3>How To Make Music With AI: Generate Song From Text</h3>
+            <a href="https://www.youtube.com/watch?v=Px7pVig3azQ" class="duration">Check Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Section -->
+  <div class="wrapper">
+    <section class="app-section">
+      <h2>Get our App</h2>
+      <p>You can use our App for a better experience on smartphones</p>
+      <div class="app-buttons">
+        <div class="app-btn">
+          <img src="{{ url_for('static', filename='images/google-play-icon.svg') }}" alt="App Store Icon" />
+          <span>Download on the App Store</span>
+        </div>
+
+        <div class="app-btn">
+          <img src="{{ url_for('static', filename='images/appstore-icon.svg') }}" alt="Play Store Icon" />
+          <span>Get it on Google Play</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="wrapper">
+      <div class="links-container">
+        <div class="links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="links">
+          <h3>Suggestions</h3>
+          <ul>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Forum</a></li>
+          </ul>
+        </div>
+
+        <div class="links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </div>
+
+        <div class="logo">
+          <div>SynthAI.</div>
+          <p>&copy; 2024 SynthAI. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>

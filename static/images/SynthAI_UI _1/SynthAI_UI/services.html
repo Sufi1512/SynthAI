@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Generative AI SaaS Platform</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4A90E2;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .wrapper {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .services-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 28px;
+            border-bottom: 2px solid #4A90E2;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .service-card {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .service-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .service-card h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .service-card p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+        .service-card-link {
+    text-decoration: none; /* Remove underline from the entire card */
+    color: inherit; /* Keep the original text color */
+}
+
+.service-card-link h3,
+.service-card-link p,
+.service-card-link a {
+    text-decoration: none; /* Ensure no underline on any inner text */
+    color: inherit; /* Ensure color stays consistent */
+}
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #4A90E2;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <section class="services-section">
+                <h2>Our AI-Powered Services</h2>
+                
+                <a href="text_to_image.html" class="service-card-link">
+                    <div class="service-card">
+                        <img src="images/image.jpeg" alt="Text to Image">
+                        <div>
+                            <h3>Text to Image</h3>
+                            <p>Transform textual descriptions into high-quality images. Our text-to-image generator turns your ideas into visual content effortlessly, making it perfect for creative projects and visual storytelling.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="text_generation.html" class="service-card-link">
+                    <div class="service-card">
+                        <img src="images/tg.jpeg" alt="Text Generation">
+                        <div>
+                            <h3>Text Generation</h3>
+                            <p>Create high-quality written content from simple prompts. Our text generation tool leverages AI to craft engaging articles, stories, and marketing copy, tailored to your specific needs.</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="text_to_music.html" class="service-card-link">
+                    <div class="service-card">
+                        <img src="images/music.jpeg" alt="Text to Music">
+                        <div>
+                            <h3>Text to Music</h3>
+                            <p>Generate music compositions based on textual descriptions. With our text-to-music tool, you can create unique melodies and soundscapes tailored to your needs.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Add more services as needed -->
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Generative AI SaaS Platform. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Music Generator</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #666;
+            text-align: left;
+        }
+
+        .input-group input {
+            width: calc(100% - 12px);
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .generate-button {
+            background-color: #4A90E2;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .generate-button:hover {
+            background-color: #357ABD;
+        }
+
+        .output-section {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .output-section h3 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .output-section p {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Music Generator</h1>
+        <div class="input-group">
+            <label for="textInput">Enter your text:</label>
+            <input type="text" id="textInput" placeholder="Type something...">
+        </div>
+        <button class="generate-button" onclick="generateMusic()">Generate Music</button>
+        <div class="output-section">
+            <h3>Generated Music:</h3>
+            <p id="musicOutput">Your music will appear here...</p>
+        </div>
+    </div>
+
+    <script>
+        function generateMusic() {
+            const textInput = document.getElementById('textInput').value;
+            const musicOutput = document.getElementById('musicOutput');
+
+            if (textInput) {
+                // Placeholder logic for generating music
+                // Replace this with the actual functionality
+                musicOutput.innerText = `Generating music for: "${textInput}"...`;
+            } else {
+                musicOutput.innerText = 'Please enter some text to generate music.';
+            }
+        }
+    </script>
+</body>
+</html>

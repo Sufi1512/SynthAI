@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Text to Image Generator</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .input-section {
+            margin-bottom: 20px;
+        }
+
+        .input-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #generate-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4A90E2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        #generate-button:hover {
+            background-color: #357ABD;
+        }
+
+        .image-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #image-placeholder {
+            width: 100%;
+            height: 300px;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        #download-button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #4A90E2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #download-button:hover {
+            background-color: #357ABD;
+        }
+
+        .history-section {
+            margin-top: 40px;
+        }
+
+        .history-section h3 {
+            margin-bottom: 10px;
+        }
+
+        #history-container {
+            display: flex;
+            overflow-x: auto;
+        }
+
+        #history-container img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>AI-Powered Text to Image Generator</h1>
+            <p>Transform your words into stunning visuals.</p>
+        </header>
+
+        <!-- Main Input Section -->
+        <section class="input-section">
+            <label for="description">Enter your description:</label>
+            <textarea id="description" placeholder="Describe the image you want to create..."></textarea>
+            <button id="generate-button">Generate Image</button>
+        </section>
+
+        <!-- Generated Image Display Section -->
+        <section class="image-section">
+            <div id="image-placeholder">
+                <p>Your generated image will appear here.</p>
+            </div>
+            <a id="download-button" style="display:none;">Download Image</a>
+        </section>
+
+        <!-- History Section -->
+        <section class="history-section">
+            <h3>History</h3>
+            <div id="history-container">
+                <!-- Thumbnails of generated images will appear here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Powered by AI </p>
+    </footer>
+
+    <script>
+        document.getElementById('generate-button').addEventListener('click', function() {
+            const description = document.getElementById('description').value;
+            if (description.trim() === "") {
+                alert("Please enter a description.");
+                return;
+            }
+
+            // Placeholder: Replace with your API call to generate the image
+            const generatedImageUrl = "https://via.placeholder.com/600x300.png?text=Generated+Image"; // Placeholder URL
+
+            // Display the generated image
+            const imagePlaceholder = document.getElementById('image-placeholder');
+            imagePlaceholder.innerHTML = `<img src="${generatedImageUrl}" alt="Generated Image" />`;
+
+            // Show the download button
+            const downloadButton = document.getElementById('download-button');
+            downloadButton.style.display = 'block';
+            downloadButton.href = generatedImageUrl;
+            downloadButton.download = 'generated-image.png';
+
+            // Add to history
+            const historyContainer = document.getElementById('history-container');
+            const imgElement = document.createElement('img');
+            imgElement.src = generatedImageUrl;
+            historyContainer.appendChild(imgElement);
+        });
+    </script>
+</body>
+</html>
